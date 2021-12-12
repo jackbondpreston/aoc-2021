@@ -13,8 +13,6 @@ import qualified Data.Map as Map
 type Coord     = (Int, Int)
 type LineEnds  = (Coord, Coord)
 
-type Grid       = Map Coord Integer
-
 int :: Parser Int
 int = read <$> many1 digit
 

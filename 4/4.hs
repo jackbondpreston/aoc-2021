@@ -47,8 +47,6 @@ processTurns :: [[[Int]]] -> [Int] -> [[Bool]]
 processTurns boards draws = map (checkBoards boards) turns
     where turns = [ take n draws | n <- [1 .. length draws ] ]
 
-
--- ret: (turn no, board win states)
 getWinner :: [[[Int]]] -> [Int] -> (Int, Int)
 getWinner boards draws = (turnNo, winnerIndex)
     where results     = processTurns boards draws
